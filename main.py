@@ -14,10 +14,7 @@ app = FastAPI(
     description="Production Ready MVP using FastAPI"
 )
 
-
-@app.on_event("startup")
-def startup():
-    create_tables()
+create_tables()
 
 
 app.include_router(auth_router)
